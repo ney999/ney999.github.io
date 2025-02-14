@@ -1,0 +1,101 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;/*#eB0202*/
+	overflow: hidden;
+}
+
+h2
+{
+	color: #fff;
+	text-align: center;
+	font-size: 12vw;
+	line-height: 100px;
+	z-index: 1000;
+	font-weight: 900;
+}
+h2 span
+{
+	font-size: 0.2em;
+	letter-spacing: 0.4em;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.container h2 .att
+{
+	color: #fff;
+	text-align: center;
+	font-size: 2vw;
+	line-height: 1em;
+	z-index: 1000;
+	font-weight: 900;
+}
+.heart
+{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: #eB0202;
+	transform: rotate(45deg);
+	box-shadow: 20px 20px 40px rgba(0,0,0,0.2);
+}
+
+.heart::before
+{
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #eB0202;
+	border-radius: 50%;
+	box-shadow: 0 -20px 20px rgba(0,0,0,0.1);
+}
+
+.heart::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 100%;
+	height: 100%;
+	background: #eB0202;
+	border-radius: 50%;
+	box-shadow: -20px 0 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 991px)
+{
+
+h2
+{
+	font-size: 14vw;
+	line-height: 1em;
+}
+
+h2 span {
+    font-size: 0.28em;
+}
+
+
+.container h2 .att {
+    font-size: 4vw;
+}
+}
